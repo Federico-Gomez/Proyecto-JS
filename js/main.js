@@ -3,10 +3,10 @@
 function registrarUsuario() {
     let nombreUsuario = prompt("Ingrese su nombre.");
     let apellidoUsuario = prompt("Ingrese su apellido.");
-    let emailUsuario = prompt("Ingrese un correo electrónico.");
-    let passwordUsuario = prompt("Ingrese una contraseña.");
+    let emailUsuarioRegistro = prompt("Ingrese un correo electrónico.");
+    let passwordUsuarioRegistro = prompt("Ingrese una contraseña.");
     let validarPassword = prompt("Ingrese nuevamente la contraseña.");
-    if (passwordUsuario == validarPassword) {
+    if (passwordUsuarioRegistro === validarPassword) {
         alert("Te has registrado con éxito a nuestra plataforma.");
         console.log("Te has registrado con éxito a nuestra plataforma.");
     } else {
