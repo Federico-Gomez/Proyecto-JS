@@ -4,12 +4,13 @@ function registrarUsuario() {
     let nombreUsuario = prompt("Ingrese su nombre.");
     let apellidoUsuario = prompt("Ingrese su apellido.");
     let emailUsuario = prompt("Ingrese un correo electrónico.");
-    let passwordUsuario = prompt("Ingrese una contraseña.")
-    let validarPassword = prompt("Ingrese nuevamente la contraseña.")
+    let passwordUsuario = prompt("Ingrese una contraseña.");
+    let validarPassword = prompt("Ingrese nuevamente la contraseña.");
     if (passwordUsuario == validarPassword) {
+        alert("Te has registrado con éxito a nuestra plataforma.");
         console.log("Te has registrado con éxito a nuestra plataforma.");
     } else {
-        alert("Las contraseñas ingresadas no coinciden.")
+        alert("Las contraseñas ingresadas no coinciden.");
     }
 }
 
@@ -71,7 +72,7 @@ function inscripcionACarrera() {
 
                 arancel += 2000000;
 
-                alert("Inscripción exitosa.")
+                alert("Inscripción exitosa.");
 
                 break;
 
@@ -82,7 +83,7 @@ function inscripcionACarrera() {
 
                 arancel += 1200000;
 
-                alert("Inscripción exitosa.")
+                alert("Inscripción exitosa.");
 
                 break;
 
@@ -93,7 +94,7 @@ function inscripcionACarrera() {
 
                 arancel += 1600000;
 
-                alert("Inscripción exitosa.")
+                alert("Inscripción exitosa.");
 
                 break;
 
@@ -122,7 +123,7 @@ function inscripcionAPosgrado() {
 
                 arancel += 200000;
 
-                alert("Inscripción exitosa.")
+                alert("Inscripción exitosa.");
 
                 break;
 
@@ -133,7 +134,7 @@ function inscripcionAPosgrado() {
 
                 arancel += 180000;
 
-                alert("Inscripción exitosa.")
+                alert("Inscripción exitosa.");
 
                 break;
 
@@ -144,7 +145,7 @@ function inscripcionAPosgrado() {
 
                 arancel += 240000;
 
-                alert("Inscripción exitosa.")
+                alert("Inscripción exitosa.");
 
                 break;
 
@@ -227,7 +228,7 @@ while (operacion !== "0") {
         case "2":
 
             //Usuario quiere iniciar sesión en su cuenta
-            iniciarSesion()
+            iniciarSesion();
 
 
             break;
