@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Proyecto JS</title>
+    <title>Proyecto JS - Registro de Usuario / Iniciar Sesión para Plataforma de Educación</title>
+    <script src="https://kit.fontawesome.com/4c7a2a9833.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <div class="container">
+        <div class="formulario">
+            <h1 id="title">Registrarse</h1>
+            <form action="">
+                <div class="input-group">
+                    <div class="input-field" id="nombreField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Ingresá tu Nombre">
+                    </div>
+                    <div class="input-field" id="apellidoField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Ingresá tu Apellido">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Ingresá tu Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Ingresá una Contraseña">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Ingresá nuevamente la Contraseña">
+                    </div>
+                    <p>¿Olvidaste tu Contraseña?<a href="#">Recuperar</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="registrarseBtn">Registrarse</button>
+                    <button type="button" id="iniciarSesionBtn" class="disabled">Iniciar Sesión</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 
     <script src="./js/main.js"></script>
 </body>
+
 </html>
