@@ -1,0 +1,92 @@
+.contenedor-inscripciones {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .disabled {
+        display: none;
+    }
+
+    .sin_inscripciones {
+        color: #3c00a0;
+    }
+
+    .con_inscripciones {
+        color: #3c00a0;
+    }
+
+    .inscripciones {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .inscripcion {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: grey;
+            color: #3c00a0;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            padding-right: 1.5rem;
+
+            .inscripcion-imagen {
+                width: 4rem;
+                border-radius: 1rem;
+            }
+
+            small {
+                font-size: 0.75rem;
+            }
+
+            .inscripcion-eliminar {
+                border: 0;
+                background-color: transparent;
+                color: rgb(230, 19, 19);
+                cursor: pointer;
+            }
+
+        }
+
+        .inscripciones-acciones {
+            display: flex;
+            justify-content: space-between;
+
+            .inscripciones-acciones-eliminar {
+                border: 0;
+                background-color: grey;
+                color: #3c00a0;
+                text-transform: uppercase;
+                cursor: pointer;
+                padding: 1rem;
+                border-radius: 1rem;
+            }
+
+            .inscripciones-acciones-der {
+                display: flex;
+
+                .inscripciones-acciones-total {
+                    display: flex;
+                    background-color: grey;
+                    color: #3c00a0;
+                    text-transform: uppercase;
+                    padding: 1rem;
+                    border-top-left-radius: 1rem;
+                    border-bottom-left-radius: 1rem;
+                }
+
+                .inscripciones-acciones-pagar {
+                    border: 0;
+                    background-color: #3c00a0;
+                    color: #fff;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    padding: 1rem;
+                    border-top-right-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+                }
+
+            }
+        }
+    }
+}

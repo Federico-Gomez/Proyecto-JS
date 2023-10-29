@@ -1,223 +1,133 @@
-//Funciones
+//Objetos
 
-function registrarUsuario() {
-    let nombreUsuario = prompt("Ingrese su nombre.");
-    let apellidoUsuario = prompt("Ingrese su apellido.");
-    let emailUsuarioRegistro = prompt("Ingrese un correo electrónico.");
-    let passwordUsuarioRegistro = prompt("Ingrese una contraseña.");
-    let validarPassword = prompt("Ingrese nuevamente la contraseña.");
-    if (passwordUsuarioRegistro === validarPassword) {
-        alert("Te has registrado con éxito a nuestra plataforma.");
-        console.log("Te has registrado con éxito a nuestra plataforma.");
-    } else {
-        alert("Las contraseñas ingresadas no coinciden.");
+//Constructor para Carreras
+class Carrera {
+    constructor(nombre, duracion, materias, id, arancel, imagen) {
+        this.nombre = nombre;
+        this.duracion = duracion;
+        this.materias = materias;
+        this.id = id;
+        this.arancel = arancel;
+        this.imagen = imagen;
+    }
+}
+
+//Constructor para Posgrados
+class Posgrado {
+    constructor(nombre, duracion, materias, id, arancel, imagen) {
+        this.nombre = nombre;
+        this.duracion = duracion;
+        this.materias = materias;
+        this.id = id;
+        this.arancel = arancel;
+        this.imagen = imagen;
+    }
+}
+
+//Arrays
+
+//Array de Carreras
+const carreras = [
+    new Carrera("Biología", "5 años", 30, "cs_naturales", "$2000000", "./img/Inicio.png"),
+    new Carrera("Química", "5 años", 32, "cs_naturales", "$2000000"),
+    new Carrera("Física", "5 años", 28, "cs_naturales", "$2000000"),
+    new Carrera("Computación", "5 años", 26, "cs_naturales", "$2000000"),
+
+    new Carrera("Derecho", "5 años", 36, "cs_sociales", 1800000),
+    new Carrera("Economía", "5 años", 25, "cs_sociales", 1800000),
+    new Carrera("Administración de Empresas", "5 años", 26, "cs_sociales", 1800000),
+    new Carrera("Administración Actuarial", "5 años", 26, "cs_sociales", 1800000),
+
+    new Carrera("Arquitectura", "5 años", 28, "arquitectura", 1900000),
+    new Carrera("Diseño Gráfico", "5 años", 24, "arquitectura", 1900000),
+    new Carrera("Diseño Industrial", "5 años", 26, "arquitectura", 1900000),
+    new Carrera("Diseño de Indumentaria", "5 años", 26, "arquitectura", 1900000),
+]
+
+//Array de Posgrados
+const posgrados = [
+    new Posgrado("Seguridad e Higiene", "1 año", 18, "cs_naturales", 200000),
+    new Posgrado("Desarrollo Sustentable", "1 año", 14, "cs_naturales", 200000),
+
+    new Posgrado("Comercio Exterior", "1 año", 15, "cs_sociales", 180000),
+    new Posgrado("Derecho Constitucional", "1 año", 16, "cs_sociales", 180000),
+
+    new Posgrado("Seguridad en la Construcción", "1 año", 18, "arquitectura", 240000),
+    new Posgrado("Paisajismo", "1 año", 14, "arquitectura", 240000),
+]
+
+const contenedorCarreras = document.getElementById("contenedor-carreras");
+
+const contenedorPosgrados = document.getElementById("contenedor-posgrados");
+
+const btnFacultad = document.querySelectorAll(".btn-facultad");
+
+
+function renderizarCarreras() {
+
+    contenedorCarreras.innerHTML = "";
+
+    for (const carrera of carreras) {
+        const div = document.createElement("div");
+        div.classList.add("carreras");
+        div.innerHTML = `
+        <img class="carrera-imagen" src="${carrera.imagen}" alt="${carrera.nombre}">
+         <div class="carrera-detalles">
+            <h3 class="carrera-titulo">${carrera.nombre}</h3>
+            <p class="carrera-arancel">${carrera.arancel}</p>
+            <button class="carrera-ingresar" id=${carrera}>Ingresar</button>
+        </div>
+        `
+        contenedorCarreras.append(div);
     }
 }
 
 
-function iniciarSesion() {
-    let emailUsuario = prompt("Ingrese su correo electrónico.");
-    let passwordUsuario = prompt("Ingrese su contraseña.");
+function renderizarPosgrados() {
 
-    let operacion = prompt("¿Qué operación desea realizar?: 1 - Inscribirme a una Carrera, 2 - Inscribirme a un Posgrado, 3 - Consultar Aranceles, 0 - Salir.");
+    contenedorPosgrados.innerHTML = "";
 
-    while (operacion !== "0") {
-        switch (operacion) {
+    posgrados.forEach(posgrado => {
 
-            case "1":
+        const div = document.createElement("div");
 
-                //Usuario quiere inscribirse a una Materia de una Carrera de Grado
-                inscripcionACarrera();
+        div.classList.add("posgrados");
+        
+        div.innerHTML = `
+        <img class="posgrado-imagen" src="${posgrado.imagen}" alt="${posgrado.nombre}">
+         <div class="posgrado-detalles">
+            <h3 class="posgrado-titulo">${posgrado.nombre}</h3>
+            <p class="posgrado-arancel">${posgrado.arancel}</p>
+            <button class="posgrado-ingresar" id=${posgrado}>Ingresar</button>
+        </div>
+        `;
 
-                break;
+        contenedorPosgrados.append(div);
+    }) 
+}
 
-            case "2":
+renderizarCarreras();
 
-                //Usuario quiere inscribirse a un Posgrado
-                inscripcionAPosgrado()
-
-
-                break;
-
-
-            case "3":
-
-                //Usuario quiere consultar aranceles.
-                consultarAranceles()
+renderizarPosgrados();
 
 
-                break;
+btnFacultad.forEach(boton => {
 
-            default:
+    boton.addEventListener("click", (e) => {
 
-                alert("Elija una operación válida.");
+        btnFacultad.forEach(boton => boton.classList.remove("active"));
 
-                break;
+        e.currentTarget.classList.add("active");
+
+        if (e.currentTarget.id != "todos") {
+            const carrerasSeleccion = carreras.filter(carrera => carrera.id === e.currentTarget.id);
+            const posgradosSeleccion = posgrados.filter(posgrado => posgrado.id === e.currentTarget.id);
+            renderizarCarreras(carrerasSeleccion);
+            renderizarPosgrados(posgradosSeleccion);
+        } else {
+            renderizarCarreras(carreras);
+            renderizarPosgrados(posgrados);
         }
 
-        operacion = prompt("¿Qué operación desea realizar?: 1 - Inscribirme a una Materia, 2 - Inscribirme a un Posgrado, 3 - Consultar Aranceles, 0 - Salir.");
-    }
-}
-
-function inscripcionACarrera() {
-    let inscripcionCarrera = prompt("Indique la Facultad a la que pertenece la Carrera en la que desea inscribirse: 1 - Ciencias Naturales, 2 - Ciencias Sociales, 3 - Arquitectura, 0 - Salir.");
-
-    while (inscripcionCarrera !== "0") {
-        switch (inscripcionCarrera) {
-
-            case "1":
-
-                //Usuario quiere inscribirse a una Carrera de la Facultad de Ciencias Naturales
-                prompt("Indique la Carrera en la que desea inscribirse: 1 - Biología, 2 - Química, 3 - Física, 4 - Computación, 0 - Salir.");
-
-                arancel += 2000000;
-
-                alert("Inscripción exitosa.");
-
-                break;
-
-            case "2":
-
-                //Usuario quiere inscribirse a una Carrera de la Facultad de Ciencias Sociales
-                prompt("Indique la Carrera en la que desea inscribirse: 1 - Derecho, 2 - Economía, 3 - Administración de Empresas, 0 - Salir.");
-
-                arancel += 1200000;
-
-                alert("Inscripción exitosa.");
-
-                break;
-
-            case "3":
-
-                //Usuario quiere inscribirse a una Carrera de la Facultad de Arquitectura
-                prompt("Indique la Carrera en la que desea inscribirse: 1 - Arquitectura, 2 - Diseño Gráfico, 3 - Diseño Industrial, 0 - Salir.");
-
-                arancel += 1600000;
-
-                alert("Inscripción exitosa.");
-
-                break;
-
-            default:
-
-                alert("Elija una operación válida.");
-
-                break;
-        }
-
-        inscripcionCarrera = prompt("Indique la Facultad a la que pertenece la Carrera en la que desea inscribirse: 1 - Ciencias Naturales, 2 - Ciencias Sociales 3 - Arquitectura, 0 - Salir.");
-    }
-
-}
-
-function inscripcionAPosgrado() {
-    let inscripcionPosgrado = prompt("Indique la Facultad a la que pertenece el Posgrado en el que desea inscribirse: 1 - Ciencias Naturales, 2 - Ciencias Sociales, 3 - Arquitectura, 0 - Salir.");
-
-    while (inscripcionPosgrado !== "0") {
-        switch (inscripcionPosgrado) {
-
-            case "1":
-
-                //Usuario quiere inscribirse a un Posgrado de la Facultad de Ciencias Naturales
-                prompt("Indique el Posgrado en el que desea inscribirse: 1 - Seguridad e Higiene, 2 - Desarrollo Ambiental Sustentable, 0 - Salir.");
-
-                arancel += 200000;
-
-                alert("Inscripción exitosa.");
-
-                break;
-
-            case "2":
-
-                //Usuario quiere inscribirse a un Posgrado de la Facultad de Ciencias Sociales
-                prompt("Indique el Posgrado en el que desea inscribirse: 1 - Comercio Exterior, 2 - Derecho Constitucional, 0 - Salir.");
-
-                arancel += 180000;
-
-                alert("Inscripción exitosa.");
-
-                break;
-
-            case "3":
-
-                //Usuario quiere inscribirse a un Posgrado de la Facultad de Arquitectura
-                prompt("Indique el Posgrado en el que desea inscribirse: 1 - Seguridad en la Construcción, 2 - Paisajismo, 0 - Salir.");
-
-                arancel += 240000;
-
-                alert("Inscripción exitosa.");
-
-                break;
-
-            default:
-
-                alert("Elija una operación válida.");
-
-                break;
-        }
-
-        inscripcionPosgrado = prompt("Indique la Facultad a la que pertenece el Posgrado en el que desea inscribirse: 1 - Ciencias Naturales, 2 - Ciencias Sociales, 3 - Arquitectura, 0 - Salir.");
-    }
-
-}
-
-function consultarAranceles() {
-    alert("El arancel es: $" + arancel);
-}
-
-let registrarseBtn = document.getElementById("registrarseBtn");
-let iniciarSesionBtn = document.getElementById("iniciarSesionBtn");
-let nombreField = document.getElementById("nombreField");
-let apellidoField = document.getElementById("apellidoField");
-let title = document.getElementById("title");
-
-iniciarSesionBtn.onclick = function() {
-    nombreField.style.maxHeight = 0;
-    apellidoField.style.maxHeight = 0;
-    title.innerHTML = "Iniciar Sesión";
-    registrarseBtn.classList.add("disabled");
-    iniciarSesionBtn.classList.remove("disabled");
-}
-
-registrarseBtn.onclick = function() {
-    nombreField.style.maxHeight = "60px";
-    apellidoField.style.maxHeight = "60px";
-    title.innerHTML = "Registrarse";
-    registrarseBtn.classList.remove("disabled");
-    iniciarSesionBtn.classList.add("disabled");
-}
-
-//Programa
-let arancel = 0;
-let operacion = prompt("¿Qué operación desea realizar?: 1 - Registrarse, 2 - Iniciar sesión, 0 - Salir.");
-
-while (operacion !== "0") {
-    switch (operacion) {
-
-        case "1":
-
-            //Usuario quiere registrarse
-            registrarUsuario();
-
-            break;
-
-        case "2":
-
-            //Usuario quiere iniciar sesión en su cuenta
-            iniciarSesion();
-
-
-            break;
-
-        default:
-
-            alert("Elija una operación válida.");
-
-            break;
-    }
-
-    operacion = prompt("¿Qué operación desea realizar?: 1 - Registrarse, 2 - Iniciar sesión, 0 - Salir.");
-
-}
-
-alert("¡Gracias por elegirnos!");
+    })
+})
