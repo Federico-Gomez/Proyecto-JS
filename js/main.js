@@ -63,11 +63,12 @@ const contenedorPosgrados = document.getElementById("contenedor-posgrados");
 const btnFacultad = document.querySelectorAll(".btn-facultad");
 
 
-function renderizarCarreras() {
+function renderizarCarreras(carrerasElegidas) {
 
     contenedorCarreras.innerHTML = "";
 
-    for (const carrera of carreras) {
+    carrerasElegidas.forEach(carrera => {
+
         const div = document.createElement("div");
         div.classList.add("carreras");
         div.innerHTML = `
@@ -79,20 +80,18 @@ function renderizarCarreras() {
         </div>
         `
         contenedorCarreras.append(div);
-    }
+    })
 }
 
 
-function renderizarPosgrados() {
+function renderizarPosgrados(posgradosElegidos) {
 
     contenedorPosgrados.innerHTML = "";
 
-    posgrados.forEach(posgrado => {
+    posgradosElegidos.forEach(posgrado => {
 
         const div = document.createElement("div");
-
         div.classList.add("posgrados");
-        
         div.innerHTML = `
         <img class="posgrado-imagen" src="${posgrado.imagen}" alt="${posgrado.nombre}">
          <div class="posgrado-detalles">
@@ -103,12 +102,12 @@ function renderizarPosgrados() {
         `;
 
         contenedorPosgrados.append(div);
-    }) 
+    })
 }
 
-renderizarCarreras();
+renderizarCarreras(carreras);
 
-renderizarPosgrados();
+renderizarPosgrados(posgrados);
 
 
 btnFacultad.forEach(boton => {
@@ -120,10 +119,10 @@ btnFacultad.forEach(boton => {
         e.currentTarget.classList.add("active");
 
         if (e.currentTarget.id != "todos") {
-            const carrerasSeleccion = carreras.filter(carrera => carrera.id === e.currentTarget.id);
-            const posgradosSeleccion = posgrados.filter(posgrado => posgrado.id === e.currentTarget.id);
-            renderizarCarreras(carrerasSeleccion);
-            renderizarPosgrados(posgradosSeleccion);
+            const carreraSeleccion = carreras.filter(carrera => carrera.id === e.currentTarget.id);
+            const posgradoSeleccion = posgrados.filter(posgrado => posgrado.id === e.currentTarget.id);
+            renderizarCarreras(carreraSeleccion);
+            renderizarPosgrados(posgradoSeleccion);
         } else {
             renderizarCarreras(carreras);
             renderizarPosgrados(posgrados);
