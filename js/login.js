@@ -171,6 +171,9 @@ let nombreField = document.getElementById("nombreField");
 let apellidoField = document.getElementById("apellidoField");
 let title = document.getElementById("title");
 
+
+//Función para alternar entre Registrarse en caso de nuevos usuarios e Iniciar Sesión para usuarios ya registrados.
+
 iniciarSesionBtn.onclick = function() {
     nombreField.style.maxHeight = 0;
     apellidoField.style.maxHeight = 0;

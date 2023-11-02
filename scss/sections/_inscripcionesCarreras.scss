@@ -1,0 +1,121 @@
+.wrapper {
+    main {
+        h2 {
+            color: #3c00a0;
+            margin-bottom: 2rem;
+        }
+
+        .disabled {
+            display: none;
+        }
+
+        .contenedor-inscripciones {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .disabled {
+                display: none;
+            }
+
+            .sin_inscripciones {
+                color: #3c00a0;
+            }
+
+            .con_inscripciones {
+                color: #3c00a0;
+            }
+
+            .inscripciones-carreras {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .disabled {
+                    display: none;
+                }
+
+                .inscripcion-carreras {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: rgb(207, 200, 200);
+                    color: #3c00a0;
+                    padding: 0.5rem;
+                    border-radius: 1rem;
+                    padding-right: 1.5rem;
+
+                    .inscripcion-carreras-imagen {
+                        width: 4rem;
+                        border-radius: 1rem;
+                    }
+
+                    small {
+                        font-size: 0.75rem;
+                    }
+
+                    .inscripcion-carreras-titulo {
+                        width: 16rem;
+                        justify-content: left;
+                    }
+
+                    .inscripcion-carreras-eliminar {
+                        border: 0;
+                        background-color: transparent;
+                        color: rgb(231, 3, 3);
+                        cursor: pointer;
+                    }
+
+                }
+            }
+
+            .inscripciones-carreras-acciones {
+                display: flex;
+                justify-content: space-between;
+
+                .disabled {
+                    display: none;
+                }
+
+                .inscripciones-carreras-acciones-izq {
+                    .inscripciones-carreras-acciones-eliminar {
+                        border: 0;
+                        background-color: rgb(207, 200, 200);
+                        color: #3c00a0;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        padding: 1rem;
+                        border-radius: 1rem;
+                    }
+                }
+
+                .inscripciones-carreras-acciones-der {
+                    display: flex;
+
+                    .inscripciones-carreras-acciones-total {
+                        display: flex;
+                        background-color: rgb(207, 200, 200);
+                        color: #3c00a0;
+                        text-transform: uppercase;
+                        padding: 1rem;
+                        border-top-left-radius: 1rem;
+                        border-bottom-left-radius: 1rem;
+                    }
+
+                    .inscripciones-carreras-acciones-pagar {
+                        border: 0;
+                        background-color: #3c00a0;
+                        color: #fff;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        padding: 1rem;
+                        border-top-right-radius: 1rem;
+                        border-bottom-right-radius: 1rem;
+                    }
+
+                }
+            }
+
+        }
+    }
+}

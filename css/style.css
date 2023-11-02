@@ -36,6 +36,7 @@ a {
   text-align: center;
   background: #fff;
   padding: 50px 60px 70px;
+  border-radius: 1rem;
 }
 .container .formulario h1 {
   font-size: 30px;
@@ -111,6 +112,9 @@ a {
   display: grid;
   grid-template-columns: 1fr 4fr;
   background-color: #3c00a0;
+}
+.wrapper .disabled {
+  display: none;
 }
 .wrapper p {
   font-size: 1rem;
@@ -263,30 +267,36 @@ a {
   color: #fff;
 }
 
-main h2 {
+.wrapper main h2 {
   color: #3c00a0;
   margin-bottom: 2rem;
 }
-main .contenedor-inscripciones {
+.wrapper main .disabled {
+  display: none;
+}
+.wrapper main .contenedor-inscripciones {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-main .contenedor-inscripciones .disabled {
+.wrapper main .contenedor-inscripciones .disabled {
   display: none;
 }
-main .contenedor-inscripciones .sin_inscripciones {
+.wrapper main .contenedor-inscripciones .sin_inscripciones {
   color: #3c00a0;
 }
-main .contenedor-inscripciones .con_inscripciones {
+.wrapper main .contenedor-inscripciones .con_inscripciones {
   color: #3c00a0;
 }
-main .contenedor-inscripciones .inscripciones-carreras {
+.wrapper main .contenedor-inscripciones .inscripciones-carreras {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras {
+.wrapper main .contenedor-inscripciones .inscripciones-carreras .disabled {
+  display: none;
+}
+.wrapper main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -296,28 +306,31 @@ main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras {
   border-radius: 1rem;
   padding-right: 1.5rem;
 }
-main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras .inscripcion-carreras-imagen {
+.wrapper main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras .inscripcion-carreras-imagen {
   width: 4rem;
   border-radius: 1rem;
 }
-main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras small {
+.wrapper main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras small {
   font-size: 0.75rem;
 }
-main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras .inscripcion-carreras-titulo {
+.wrapper main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras .inscripcion-carreras-titulo {
   width: 16rem;
   justify-content: left;
 }
-main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras .inscripcion-carreras-eliminar {
+.wrapper main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras .inscripcion-carreras-eliminar {
   border: 0;
   background-color: transparent;
   color: rgb(231, 3, 3);
   cursor: pointer;
 }
-main .contenedor-inscripciones .inscripciones-carreras-acciones {
+.wrapper main .contenedor-inscripciones .inscripciones-carreras-acciones {
   display: flex;
   justify-content: space-between;
 }
-main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-carreras-acciones-eliminar {
+.wrapper main .contenedor-inscripciones .inscripciones-carreras-acciones .disabled {
+  display: none;
+}
+.wrapper main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-carreras-acciones-izq .inscripciones-carreras-acciones-eliminar {
   border: 0;
   background-color: rgb(207, 200, 200);
   color: #3c00a0;
@@ -326,10 +339,10 @@ main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-c
   padding: 1rem;
   border-radius: 1rem;
 }
-main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-carreras-acciones-der {
+.wrapper main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-carreras-acciones-der {
   display: flex;
 }
-main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-carreras-acciones-der .inscripciones-carreras-acciones-total {
+.wrapper main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-carreras-acciones-der .inscripciones-carreras-acciones-total {
   display: flex;
   background-color: rgb(207, 200, 200);
   color: #3c00a0;
@@ -338,7 +351,7 @@ main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-c
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
 }
-main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-carreras-acciones-der .inscripciones-carreras-acciones-pagar {
+.wrapper main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-carreras-acciones-der .inscripciones-carreras-acciones-pagar {
   border: 0;
   background-color: #3c00a0;
   color: #fff;
@@ -348,12 +361,37 @@ main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-c
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
-main .contenedor-inscripciones .inscripciones-posgrados {
+
+.wrapper main h2 {
+  color: #3c00a0;
+  margin-bottom: 2rem;
+}
+.wrapper main .disabled {
+  display: none;
+}
+.wrapper main .contenedor-inscripciones {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.wrapper main .contenedor-inscripciones .disabled {
+  display: none;
+}
+.wrapper main .contenedor-inscripciones .sin_inscripciones {
+  color: #3c00a0;
+}
+.wrapper main .contenedor-inscripciones .con_inscripciones {
+  color: #3c00a0;
+}
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-main .contenedor-inscripciones .inscripciones-posgrados .inscripcion-posgrados {
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados .disabled {
+  display: none;
+}
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados .inscripcion-posgrados {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -363,28 +401,31 @@ main .contenedor-inscripciones .inscripciones-posgrados .inscripcion-posgrados {
   border-radius: 1rem;
   padding-right: 1.5rem;
 }
-main .contenedor-inscripciones .inscripciones-posgrados .inscripcion-posgrados .inscripcion-posgrados-imagen {
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados .inscripcion-posgrados .inscripcion-posgrados-imagen {
   width: 4rem;
   border-radius: 1rem;
 }
-main .contenedor-inscripciones .inscripciones-posgrados .inscripcion-posgrados small {
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados .inscripcion-posgrados small {
   font-size: 0.75rem;
 }
-main .contenedor-inscripciones .inscripciones-posgrados .inscripcion-posgrados .inscripcion-posgrados-titulo {
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados .inscripcion-posgrados .inscripcion-posgrados-titulo {
   width: 16rem;
   justify-content: left;
 }
-main .contenedor-inscripciones .inscripciones-posgrados .inscripcion-posgrados .inscripcion-posgrados-eliminar {
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados .inscripcion-posgrados .inscripcion-posgrados-eliminar {
   border: 0;
   background-color: transparent;
   color: rgb(231, 3, 3);
   cursor: pointer;
 }
-main .contenedor-inscripciones .inscripciones-posgrados-acciones {
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados-acciones {
   display: flex;
   justify-content: space-between;
 }
-main .contenedor-inscripciones .inscripciones-posgrados-acciones .inscripciones-posgrados-acciones-eliminar {
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados-acciones .disabled {
+  display: none;
+}
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados-acciones .inscripciones-posgrados-acciones-izq .inscripciones-posgrados-acciones-eliminar {
   border: 0;
   background-color: rgb(207, 200, 200);
   color: #3c00a0;
@@ -393,10 +434,10 @@ main .contenedor-inscripciones .inscripciones-posgrados-acciones .inscripciones-
   padding: 1rem;
   border-radius: 1rem;
 }
-main .contenedor-inscripciones .inscripciones-posgrados-acciones .inscripciones-posgrados-acciones-der {
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados-acciones .inscripciones-posgrados-acciones-der {
   display: flex;
 }
-main .contenedor-inscripciones .inscripciones-posgrados-acciones .inscripciones-posgrados-acciones-der .inscripciones-posgrados-acciones-total {
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados-acciones .inscripciones-posgrados-acciones-der .inscripciones-posgrados-acciones-total {
   display: flex;
   background-color: rgb(207, 200, 200);
   color: #3c00a0;
@@ -405,7 +446,7 @@ main .contenedor-inscripciones .inscripciones-posgrados-acciones .inscripciones-
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
 }
-main .contenedor-inscripciones .inscripciones-posgrados-acciones .inscripciones-posgrados-acciones-der .inscripciones-posgrados-acciones-pagar {
+.wrapper main .contenedor-inscripciones .inscripciones-posgrados-acciones .inscripciones-posgrados-acciones-der .inscripciones-posgrados-acciones-pagar {
   border: 0;
   background-color: #3c00a0;
   color: #fff;
