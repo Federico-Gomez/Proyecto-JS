@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/4c7a2a9833.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="wrapper">
         <aside>
@@ -17,8 +19,9 @@
 
             <nav>
                 <ul class="menu">
-                    <li><a class="btn-menu btn-volver" href="./main.html"><i class="bi bi-arrow-return-left"></i>Volver</a></li>
-                    <li><a class="btn-menu btn-inscripciones active" href="./inscripciones.html">Mis inscripciones </a></li>
+                    <li><a class="btn-menu btn-volver" href="./main.html"><i
+                                class="bi bi-arrow-return-left"></i>Volver</a></li>
+                    <li><a class="btn-menu btn-inscripciones" href="./inscripciones.html">Mis inscripciones </a></li>
                 </ul>
             </nav>
 
@@ -28,45 +31,78 @@
         </aside>
 
         <main>
-            <h2 class="titulo-principal">Mis inscripciones</h2>
+            <h2 class="titulo-principal">Inscripciones activas</h2>
             <div class="contenedor-inscripciones">
-                <p class="sin_inscripciones">No tenés inscripciones activas.</p>
+                <p id="sin_inscripciones" class="sin_inscripciones">No tenés inscripciones activas.</p>
 
-                <div class="inscripciones disabled">
-                    <div class="inscripcion">
-                        <img class="inscripcion-imagen" src="#" alt="">
-                        <div class="inscripcion-titulo">
+                <div id="inscripciones-carreras" class="inscripciones-carreras disabled">
+                    <!-- <div class="inscripcion-carreras">
+                        <img class="inscripcion-carreras-imagen" src="#" alt="">
+                        <div class="inscripcion-carreras-titulo">
                             <small>Título</small>
                             <h3>Inscripción</h3>
 
                         </div>
-                        <div class="inscripcion-arancel">
+                        <div class="inscripcion-carreras-arancel">
                             <small>Arancel</small>
                             <p>Precio</p>
-                            
-                        </div>
-                        <button class="inscripcion-eliminar"><i class="bi bi-trash-fill"></i></button>
-
-                    </div>
-                    <div class="inscripciones-acciones disabled">
-                        <div class="inscripciones-acciones-izq">
-                            <button class="inscripciones-acciones-eliminar">Eliminar inscripciones</button>
 
                         </div>
-                        <div class="inscripciones-acciones-der">
-                            <div class="inscripciones-acciones-total">
-                                <p>Total:</p>
-                                <p id="total">Precio</p>
+                        <button class="inscripcion-carreras-eliminar"><i class="bi bi-trash-fill"></i></button>
 
-                            </div>
-                            <button class="inscripciones-acciones-pagar">Pagar</button>
-
-                        </div>
-                    </div>
+                    </div> -->
 
                 </div>
-                <p class="con_inscripciones disabled">¡Muchas gracias por elegirnos!</p>
-               
+                <div id="inscripciones-carreras-acciones" class="inscripciones-carreras-acciones disabled">
+                    <div class="inscripciones-carreras-acciones-izq">
+                        <button class="inscripciones-carreras-acciones-eliminar">Eliminar inscripciones</button>
+
+                    </div>
+                    <div class="inscripciones-carreras-acciones-der">
+                        <div class="inscripciones-carreras-acciones-total">
+                            <p>Total:</p>
+                            <p id="total-carrera">Precio</p>
+
+                        </div>
+                        <button class="inscripciones-carreras-acciones-pagar">Pagar</button>
+
+                    </div>
+                </div>
+                <div id="inscripciones-posgrados" class="inscripciones-posgrados disabled">
+                    <!-- <div class="inscripcion-posgrados">
+                        <img class="inscripcion-posgrados-imagen" src="#" alt="">
+                        <div class="inscripcion-posgrados-titulo">
+                            <small>Título</small>
+                            <h3>Inscripción</h3>
+
+                        </div>
+                        <div class="inscripcion-posgrados-arancel">
+                            <small>Arancel</small>
+                            <p>Precio</p>
+
+                        </div>
+                        <button class="inscripcion-posgrados-eliminar"><i class="bi bi-trash-fill"></i></button>
+
+                    </div> -->
+
+                </div>
+                <div id="inscripciones-posgrados-acciones" class="inscripciones-posgrados-acciones disabled">
+                    <div class="inscripciones-posgrados-acciones-izq">
+                        <button class="inscripciones-posgrados-acciones-eliminar">Eliminar inscripciones</button>
+
+                    </div>
+                    <div class="inscripciones-posgrados-acciones-der">
+                        <div class="inscripciones-posgrados-acciones-total">
+                            <p>Total:</p>
+                            <p id="total-posgrado">Precio</p>
+
+                        </div>
+                        <button class="inscripciones-posgrados-acciones-pagar">Pagar</button>
+
+                    </div>
+                </div>
+                <p id="con_inscripciones" class="con_inscripciones disabled">¡Muchas gracias por elegirnos!</p>
+
             </div>
         </main>
 
@@ -78,6 +114,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="./js/inscripciones.js"></script>
-    
+
 </body>
+
 </html>
