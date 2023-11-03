@@ -165,11 +165,13 @@ function consultarAranceles() {
     alert("El arancel es: $" + arancel);
 }
 
+let container = document.getElementById("container")
 let registrarseBtn = document.getElementById("registrarseBtn");
 let iniciarSesionBtn = document.getElementById("iniciarSesionBtn");
 let nombreField = document.getElementById("nombreField");
 let apellidoField = document.getElementById("apellidoField");
 let title = document.getElementById("title");
+let btnDLMode = document.getElementById("btn-DL-mode");
 
 
 //Función para alternar entre Registrarse en caso de nuevos usuarios e Iniciar Sesión para usuarios ya registrados.
@@ -190,6 +192,80 @@ registrarseBtn.onclick = function() {
     iniciarSesionBtn.classList.add("disabled");
 }
 
+
+// Función para un dark/light theme toggle.
+
+function darkMode() {
+     title.style.color = "black";
+     btnDLMode.innerHTML = `
+    Light Mode
+    <i class="bi bi-sun-fill"></i>
+    `;
+    
+    iniciarSesionBtn.onclick = function() {
+        nombreField.style.maxHeight = 0;
+        apellidoField.style.maxHeight = 0;
+        title.innerHTML = "Iniciar Sesión";
+        registrarseBtn.classList.add("disabled");
+        iniciarSesionBtn.classList.remove("disabled");
+    }
+    
+    registrarseBtn.onclick = function() {
+        nombreField.style.maxHeight = "60px";
+        apellidoField.style.maxHeight = "60px";
+        title.innerHTML = "Registrarse";
+        registrarseBtn.classList.remove("disabled");
+        iniciarSesionBtn.classList.add("disabled");
+    }
+    container.style.backgroundImage = "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(17,17,17,1) 72%, rgba(63,63,63,1) 100%), url(Inicio.png)";
+
+    localStorage.setItem("theme", "dark");
+
+}
+
+function lightMode() {
+    title.style.color = "#3c00a0";
+    btnDLMode.innerHTML = `
+    Dark Mode
+    <i class="bi bi-moon-fill"></i>
+    `;
+    
+    iniciarSesionBtn.onclick = function() {
+        nombreField.style.maxHeight = 0;
+        apellidoField.style.maxHeight = 0;
+        title.innerHTML = "Iniciar Sesión";
+        registrarseBtn.classList.add("disabled");
+        iniciarSesionBtn.classList.remove("disabled");
+    }
+    
+    registrarseBtn.onclick = function() {
+        nombreField.style.maxHeight = "60px";
+        apellidoField.style.maxHeight = "60px";
+        title.innerHTML = "Registrarse";
+        registrarseBtn.classList.remove("disabled");
+        iniciarSesionBtn.classList.add("disabled");
+    }
+    container.style.backgroundImage = "linear-gradient(rgba(7, 7, 51, 0.8), rgba(133, 133, 168, 0.8)), url(Inicio.png)";
+
+    localStorage.setItem("theme", "light");
+
+}
+
+btnDLMode.addEventListener("click", () => {
+    if (localStorage.getItem("theme") == "dark") {
+        lightMode();
+    } else {
+        darkMode();
+    }
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("theme") == "dark") {
+        darkMode();
+    } else {
+        lightMode();
+    }
+})
 
 //Programa
 let arancel = 0;

@@ -13,7 +13,7 @@ const btnPagarPosgrados = document.querySelector("#btn-pagar-posgrados");
 
 function renderizarPosgradosInscripciones() {
 
-    if (inscripcionesPosgrado && inscripcionesPosgrado.length > 0) {
+    if (inscripcionesPosgrado) {
 
         sin_inscripciones.classList.add("disabled");
         contenedorInscripcionesPosgrados.classList.remove("disabled");
