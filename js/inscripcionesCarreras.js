@@ -24,28 +24,32 @@ function renderizarCarrerasInscripciones() {
 
         inscripcionesCarrera.forEach(carrera => {
             const div = document.createElement("div");
-            div.classList.add("inscripcion-carreras");
+            div.classList.add("inscripcion-seleccion");
             div.innerHTML = `
-                <img class="inscripcion-carreras-imagen" src="${carrera.imagen}" alt="${carrera.nombre}">
+                <img class="inscripcion-seleccion-imagen" src="${carrera.imagen}" alt="${carrera.nombre}">
         
-                <div class="inscripcion-carreras-titulo">
+                <div class="inscripcion-seleccion-titulo">
                     <small>Carrera</small>
                     <h3>${carrera.nombre}</h3>
                 </div>
 
-                <div class="inscripcion-carreras-arancel">
+                <div class="inscripcion-seleccion-arancel">
                     <small>Arancel</small>
                     <p>${carrera.arancel}</p>
                 </div>
 
-                <button class="inscripcion-carreras-eliminar" id="${carrera.nombre}"><i class="bi bi-trash-fill"></i></button>
+                <button class="inscripcion-seleccion-eliminar" id="${carrera.nombre}"><i class="bi bi-trash-fill"></i></button>
                 `;
 
             contenedorInscripcionesCarreras.append(div);
 
         });
 
-     } else {
+        localStorage.setItem("carrera-en-inscripciones", JSON.stringify(inscripcionesCarrera));
+        arancelCarrera.innerHTML = `$ ${inscripcionesCarrera.reduce((acc, carrera) => acc + carrera.arancel, 0)}`;
+        actualizarBtnEliminarCarrera();
+
+    } else {
         sin_inscripciones.classList.remove("disabled");
         contenedorInscripcionesCarreras.classList.add("disabled");
         inscripcionesCarrerasAcciones.classList.add("disabled");
@@ -53,16 +57,13 @@ function renderizarCarrerasInscripciones() {
 
     }
 
-    arancelCarrera.innerHTML = `$ ${inscripcionesCarrera.reduce((acc, carrera) => acc + carrera.arancel, 0)}`;
-    actualizarBtnEliminarCarrera();
-
 }
 
 renderizarCarrerasInscripciones();
 
 
 function actualizarBtnEliminarCarrera() {
-    const btnEliminarCarrera = document.querySelectorAll(".inscripcion-carreras-eliminar");
+    const btnEliminarCarrera = document.querySelectorAll(".inscripcion-seleccion-eliminar");
 
     btnEliminarCarrera.forEach(boton => {
         boton.addEventListener("click", eliminarCarrera);
@@ -94,7 +95,7 @@ btnPagarCarreras.addEventListener("click", pagarCarreras);
 function pagarCarreras() {
     inscripcionesCarrera.length = 0;
     localStorage.setItem("carrera-en-inscripciones", JSON.stringify(inscripcionesCarrera));
-        
+
     sin_inscripciones.classList.add("disabled");
     contenedorInscripcionesCarreras.classList.add("disabled");
     inscripcionesCarrerasAcciones.classList.add("disabled");

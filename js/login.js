@@ -217,6 +217,7 @@ function darkMode() {
         registrarseBtn.classList.remove("disabled");
         iniciarSesionBtn.classList.add("disabled");
     }
+
     container.style.backgroundImage = "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(17,17,17,1) 72%, rgba(63,63,63,1) 100%), url(Inicio.png)";
 
     localStorage.setItem("theme", "dark");
@@ -245,6 +246,7 @@ function lightMode() {
         registrarseBtn.classList.remove("disabled");
         iniciarSesionBtn.classList.add("disabled");
     }
+    
     container.style.backgroundImage = "linear-gradient(rgba(7, 7, 51, 0.8), rgba(133, 133, 168, 0.8)), url(Inicio.png)";
 
     localStorage.setItem("theme", "light");

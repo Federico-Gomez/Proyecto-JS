@@ -26,7 +26,7 @@
                 color: #3c00a0;
             }
 
-            .inscripciones-carreras {
+            .inscripciones-seleccion {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
@@ -35,7 +35,7 @@
                     display: none;
                 }
 
-                .inscripcion-carreras {
+                .inscripcion-seleccion {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -45,7 +45,7 @@
                     border-radius: 1rem;
                     padding-right: 1.5rem;
 
-                    .inscripcion-carreras-imagen {
+                    .inscripcion-seleccion-imagen {
                         width: 4rem;
                         border-radius: 1rem;
                     }
@@ -54,12 +54,12 @@
                         font-size: 0.75rem;
                     }
 
-                    .inscripcion-carreras-titulo {
+                    .inscripcion-seleccion-titulo {
                         width: 16rem;
                         justify-content: left;
                     }
 
-                    .inscripcion-carreras-eliminar {
+                    .inscripcion-seleccion-eliminar {
                         border: 0;
                         background-color: transparent;
                         color: rgb(231, 3, 3);
@@ -69,7 +69,7 @@
                 }
             }
 
-            .inscripciones-carreras-acciones {
+            .inscripciones-seleccion-acciones {
                 display: flex;
                 justify-content: space-between;
 
@@ -77,8 +77,8 @@
                     display: none;
                 }
 
-                .inscripciones-carreras-acciones-izq {
-                    .inscripciones-carreras-acciones-eliminar {
+                .inscripciones-seleccion-acciones-izq {
+                    .inscripciones-seleccion-acciones-eliminar {
                         border: 0;
                         background-color: rgb(207, 200, 200);
                         color: #3c00a0;
@@ -89,10 +89,10 @@
                     }
                 }
 
-                .inscripciones-carreras-acciones-der {
+                .inscripciones-seleccion-acciones-der {
                     display: flex;
 
-                    .inscripciones-carreras-acciones-total {
+                    .inscripciones-seleccion-acciones-total {
                         display: flex;
                         background-color: rgb(207, 200, 200);
                         color: #3c00a0;
@@ -102,7 +102,7 @@
                         border-bottom-left-radius: 1rem;
                     }
 
-                    .inscripciones-carreras-acciones-pagar {
+                    .inscripciones-seleccion-acciones-pagar {
                         border: 0;
                         background-color: #3c00a0;
                         color: #fff;

@@ -13,7 +13,7 @@ const btnPagarPosgrados = document.querySelector("#btn-pagar-posgrados");
 
 function renderizarPosgradosInscripciones() {
 
-    if (inscripcionesPosgrado) {
+    if (inscripcionesPosgrado && inscripcionesPosgrado.length > 0) {
 
         sin_inscripciones.classList.add("disabled");
         contenedorInscripcionesPosgrados.classList.remove("disabled");
@@ -24,28 +24,32 @@ function renderizarPosgradosInscripciones() {
 
         inscripcionesPosgrado.forEach(posgrado => {
             const div = document.createElement("div");
-            div.classList.add("inscripcion-posgrados");
+            div.classList.add("inscripcion-seleccion");
             div.innerHTML = `
-                <img class="inscripcion-posgrados-imagen" src="${posgrado.imagen}" alt="${posgrado.nombre}">
+                <img class="inscripcion-seleccion-imagen" src="${posgrado.imagen}" alt="${posgrado.nombre}">
         
-                <div class="inscripcion-posgrados-titulo">
+                <div class="inscripcion-seleccion-titulo">
                     <small>Posgrado</small>
                     <h3>${posgrado.nombre}</h3>
                 </div>
 
-                <div class="inscripcion-posgrados-arancel">
+                <div class="inscripcion-seleccion-arancel">
                     <small>Arancel</small>
                     <p>${posgrado.arancel}</p>
                 </div>
 
-                <button class="inscripcion-posgrados-eliminar" id="${posgrado.nombre}"><i class="bi bi-trash-fill"></i></button>
+                <button class="inscripcion-seleccion-eliminar" id="${posgrado.nombre}"><i class="bi bi-trash-fill"></i></button>
                 `;
 
             contenedorInscripcionesPosgrados.append(div);
 
         });
 
-     } else {
+        localStorage.setItem("posgrado-en-inscripciones", JSON.stringify(inscripcionesPosgrado));
+        arancelPosgrado.innerHTML = `$ ${inscripcionesPosgrado.reduce((acc, posgrado) => acc + posgrado.arancel, 0)}`;
+        actualizarBtnEliminarPosgrado();
+
+    } else {
         sin_inscripciones.classList.remove("disabled");
         contenedorInscripcionesPosgrados.classList.add("disabled");
         inscripcionesPosgradosAcciones.classList.add("disabled");
@@ -53,16 +57,13 @@ function renderizarPosgradosInscripciones() {
 
     }
 
-    arancelPosgrado.innerHTML = `$ ${inscripcionesPosgrado.reduce((acc, posgrado) => acc + posgrado.arancel, 0)}`;
-    actualizarBtnEliminarPosgrado();
-
 }
 
 renderizarPosgradosInscripciones();
 
 
 function actualizarBtnEliminarPosgrado() {
-    const btnEliminarPosgrado = document.querySelectorAll(".inscripcion-posgrados-eliminar");
+    const btnEliminarPosgrado = document.querySelectorAll(".inscripcion-seleccion-eliminar");
 
     btnEliminarPosgrado.forEach(boton => {
         boton.addEventListener("click", eliminarPosgrado);
@@ -93,7 +94,7 @@ btnPagarPosgrados.addEventListener("click", pagarPosgrados);
 function pagarPosgrados() {
     inscripcionesPosgrado.length = 0;
     localStorage.setItem("posgrado-en-inscripciones", JSON.stringify(inscripcionesPosgrado));
-        
+
     sin_inscripciones.classList.add("disabled");
     contenedorInscripcionesPosgrados.classList.add("disabled");
     inscripcionesPosgradosAcciones.classList.add("disabled");

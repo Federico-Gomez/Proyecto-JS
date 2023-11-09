@@ -325,15 +325,15 @@ a {
 .wrapper main .contenedor-inscripciones .con_inscripciones {
   color: #3c00a0;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras .disabled {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion .disabled {
   display: none;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion .inscripcion-seleccion {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -343,31 +343,31 @@ a {
   border-radius: 1rem;
   padding-right: 1.5rem;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras .inscripcion-carreras-imagen {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion .inscripcion-seleccion .inscripcion-seleccion-imagen {
   width: 4rem;
   border-radius: 1rem;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras small {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion .inscripcion-seleccion small {
   font-size: 0.75rem;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras .inscripcion-carreras-titulo {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion .inscripcion-seleccion .inscripcion-seleccion-titulo {
   width: 16rem;
   justify-content: left;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras .inscripcion-carreras .inscripcion-carreras-eliminar {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion .inscripcion-seleccion .inscripcion-seleccion-eliminar {
   border: 0;
   background-color: transparent;
   color: rgb(231, 3, 3);
   cursor: pointer;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras-acciones {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion-acciones {
   display: flex;
   justify-content: space-between;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras-acciones .disabled {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion-acciones .disabled {
   display: none;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-carreras-acciones-izq .inscripciones-carreras-acciones-eliminar {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion-acciones .inscripciones-seleccion-acciones-izq .inscripciones-seleccion-acciones-eliminar {
   border: 0;
   background-color: rgb(207, 200, 200);
   color: #3c00a0;
@@ -376,10 +376,10 @@ a {
   padding: 1rem;
   border-radius: 1rem;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-carreras-acciones-der {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion-acciones .inscripciones-seleccion-acciones-der {
   display: flex;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-carreras-acciones-der .inscripciones-carreras-acciones-total {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion-acciones .inscripciones-seleccion-acciones-der .inscripciones-seleccion-acciones-total {
   display: flex;
   background-color: rgb(207, 200, 200);
   color: #3c00a0;
@@ -388,7 +388,7 @@ a {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
 }
-.wrapper main .contenedor-inscripciones .inscripciones-carreras-acciones .inscripciones-carreras-acciones-der .inscripciones-carreras-acciones-pagar {
+.wrapper main .contenedor-inscripciones .inscripciones-seleccion-acciones .inscripciones-seleccion-acciones-der .inscripciones-seleccion-acciones-pagar {
   border: 0;
   background-color: #3c00a0;
   color: #fff;

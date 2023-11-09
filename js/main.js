@@ -218,7 +218,7 @@ if (inscripcionesPosgradoLS) {
 
 // Función para enviar las Carreras y/o Posgrados seleccionados a la sección de Inscripciones activas en local storage.
 
-function agregarAInscripcionesCarrera(e) {
+function agregarAInscripcionesCarrera (e) {
     const idBoton = e.currentTarget.id;
 
     const inscripcionCarrera = carreras.find(carrera => carrera.nombre === idBoton);
@@ -233,7 +233,7 @@ function agregarAInscripcionesCarrera(e) {
     localStorage.setItem("carrera-en-inscripciones", JSON.stringify(inscripcionesCarrera));
 }
 
-function agregarAInscripcionesPosgrado(e) {
+function agregarAInscripcionesPosgrado (e) {
     const idBoton = e.currentTarget.id;
 
     const inscripcionPosgrado = posgrados.find(posgrado => posgrado.nombre === idBoton);
