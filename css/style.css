@@ -101,7 +101,7 @@ a {
   border-radius: 3px;
   display: flex;
   align-items: center;
-  max-height: 65px;
+  height: 50px;
   transition: max-height 0.5s;
   overflow: hidden;
 }
@@ -143,6 +143,26 @@ a {
 .container .formulario form .btn-field button.disabled {
   background: #eaeaea;
   color: #555;
+}
+.container .formulario form .submit-btn-field {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+.container .formulario form .submit-btn-field button {
+  flex-basis: 70%;
+  background: rgb(39, 126, 192);
+  color: #fff;
+  height: 40px;
+  border-radius: 18px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 1s;
+}
+.container .formulario form .submit-btn-field button.disabled {
+  display: none;
 }
 
 .wrapper {

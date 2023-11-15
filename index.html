@@ -7,40 +7,45 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Proyecto JS - Registro de Usuario/Iniciar Sesión</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://kit.fontawesome.com/4c7a2a9833.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div  id="container" class="container">
+    <div id="container" class="container">
         <div class="formulario">
             <h1 id="title">Registrarse</h1>
-            <form action="">
+            <form action="" id="formulario">
                 <div class="input-group">
                     <div class="input-field" id="nombreField">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Ingresá tu Nombre">
+                        <input type="text" id="nombre" placeholder="Ingresá tu Nombre">
                     </div>
                     <div class="input-field" id="apellidoField">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Ingresá tu Apellido">
+                        <input type="text" id="apellido" placeholder="Ingresá tu Apellido">
                     </div>
-                    <div class="input-field">
+                    <div class="input-field" id="emailField">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Ingresá tu Email">
+                        <input type="email" id="email" placeholder="Ingresá tu Email">
                     </div>
-                    <div class="input-field">
+                    <div class="input-field" id="passwordField_1">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Ingresá tu Contraseña">
+                        <input type="password" id="password_1" placeholder="Ingresá tu Contraseña">
                     </div>
-                    <div class="input-field">
+                    <div class="input-field" id="passwordField_2">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Ingresá nuevamente tu Contraseña">
+                        <input type="password" id="password_2" placeholder="Ingresá nuevamente tu Contraseña">
                     </div>
                     <p>¿Olvidaste tu Contraseña? <a href="#">Recuperar</a></p>
                 </div>
                 <div class="btn-field">
                     <button type="button" id="registrarseBtn">Registrarse</button>
                     <button type="button" id="iniciarSesionBtn" class="disabled">Iniciar Sesión</button>
+                </div>
+                <div class="submit-btn-field">
+                    <button type="button" id="submitBtn_1" class="disabled">Enviar formulario</button>
+                    <button type="button" id="submitBtn_2" class="disabled">Enviar formulario</button>
                 </div>
             </form>
         </div>
@@ -52,6 +57,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <script src="./js/login.js"></script>
 </body>
 
