@@ -224,7 +224,12 @@ function agregarAInscripcionesCarrera (e) {
     const inscripcionCarrera = carreras.find(carrera => carrera.nombre === idBoton);
 
     if (inscripcionesCarrera.some(carrera => carrera.nombre === idBoton)) {
-        alert("Ya te inscribiste a esta Carrera.");
+        return Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Ya te inscribiste a esta carrera.",
+
+        });
     } else {
         inscripcionesCarrera.push(inscripcionCarrera);
         actualizarNumeritoCarrera();
@@ -233,7 +238,7 @@ function agregarAInscripcionesCarrera (e) {
             position: "right",
             style: {
                 width: "14rem",
-              background: "linear-gradient(to right, #00b09b, #96c93d)",
+              background: "linear-gradient(90deg, rgba(38,143,207,1) 0%, rgba(0,195,167,1) 72%, rgba(167,242,238,1) 100%)",
             }
           }).showToast();
     }
@@ -247,7 +252,12 @@ function agregarAInscripcionesPosgrado (e) {
     const inscripcionPosgrado = posgrados.find(posgrado => posgrado.nombre === idBoton);
 
     if (inscripcionesPosgrado.some(posgrado => posgrado.nombre === idBoton)) {
-        alert("Ya te inscribiste a este Posgrado.");
+        return Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Ya te inscribiste a este posgrado.",
+
+        });
     } else {
         inscripcionesPosgrado.push(inscripcionPosgrado);
         actualizarNumeritoPosgrado();
@@ -256,7 +266,7 @@ function agregarAInscripcionesPosgrado (e) {
             position: "right",
             style: {
                 width: "14rem",
-              background: "linear-gradient(to right, #00b09b, #96c93d)",
+              background: "linear-gradient(90deg, rgba(38,143,207,1) 0%, rgba(0,195,167,1) 72%, rgba(167,242,238,1) 100%)",
             }
           }).showToast();
     }
