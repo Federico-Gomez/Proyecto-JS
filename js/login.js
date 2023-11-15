@@ -310,24 +310,25 @@ submitBtn_2.addEventListener("click", (e) => {
     const passwordUsuario_1 = document.getElementById("password_1").value;
     const passwordUsuario_2 = document.getElementById("password_2").value;
 
-    if (JSON.parse(localStorage.getItem("usuarios")).some(usuario => usuario.email === emailUsuario && usuario.password_1 === passwordUsuario_1 && usuario.password_2 === passwordUsuario_2)) {
+    const usuarioValidado = JSON.parse(localStorage.getItem("usuarios")).find(usuario => usuario.email === emailUsuario && usuario.password_1 === passwordUsuario_1 && usuario.password_2 === passwordUsuario_2)
 
-        Swal.fire("¡Login exitoso! ¡Bienvenido!");
+
+    if (usuarioValidado) {
+
+        Swal.fire('¡Login exitoso! ¡Bienvenido!');
+
+        window.location.href = "main.html";
 
     } else {
 
         return Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: "El email o la contraseña son incorrectos.",
+            text: "El email y/o la contraseña son incorrectos.",
 
         });
     }
 });
-
-
-
-
 
 
 

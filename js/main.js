@@ -228,6 +228,14 @@ function agregarAInscripcionesCarrera (e) {
     } else {
         inscripcionesCarrera.push(inscripcionCarrera);
         actualizarNumeritoCarrera();
+        Toastify({
+            text: "¡Inscripción exitosa!",
+            position: "right",
+            style: {
+                width: "14rem",
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            }
+          }).showToast();
     }
 
     localStorage.setItem("carrera-en-inscripciones", JSON.stringify(inscripcionesCarrera));
@@ -243,6 +251,14 @@ function agregarAInscripcionesPosgrado (e) {
     } else {
         inscripcionesPosgrado.push(inscripcionPosgrado);
         actualizarNumeritoPosgrado();
+        Toastify({
+            text: "¡Inscripción exitosa!",
+            position: "right",
+            style: {
+                width: "14rem",
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            }
+          }).showToast();
     }
 
     localStorage.setItem("posgrado-en-inscripciones", JSON.stringify(inscripcionesPosgrado));

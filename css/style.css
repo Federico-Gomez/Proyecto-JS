@@ -236,6 +236,31 @@ a {
   color: #a281d8;
   font-size: 0.85rem;
 }
+.wrapper aside .usuario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.wrapper aside .usuario .btn-usuario {
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-weight: 400;
+  padding-bottom: 0.6rem;
+  font-size: 1rem;
+}
+.wrapper aside .usuario .logout {
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-weight: 600;
+  padding-top: 0.6rem;
+  font-size: 1rem;
+}
 .wrapper main {
   background-color: #fff;
   margin: 1rem;
