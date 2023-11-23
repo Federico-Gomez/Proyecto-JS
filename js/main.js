@@ -82,6 +82,13 @@ const numeritoPosgrado = document.getElementById("numerito-posgrado");
 
 // ---------------------------------------------------------------------------------------//
 
+//Usuario logueado
+
+const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
+
+const btnUsuario = document.getElementById("btn-usuario");
+btnUsuario.innerText = "Hola " + usuarioLogueado.nombre + "!";
+
 // Función para agregar al DOM los objetos del Array de Carreras.
 
 function renderizarCarreras(carrerasElegidas) {
@@ -287,6 +294,17 @@ function actualizarNumeritoPosgrado() {
     numeritoPosgrado.innerText = nuevoNumeritoPosgrado;
 }
 
+if (localStorage.getItem("mostrarMensajeExito") === "si") {
+    Toastify({
+        text: "¡Login exitoso!",
+        position: "right",
+        style: {
+            width: "14rem",
+          background: "linear-gradient(90deg, rgba(38,143,207,1) 0%, rgba(0,195,167,1) 72%, rgba(167,242,238,1) 100%)",
+        }
+      }).showToast();
 
+      localStorage.setItem("mostrarMensajeExito", "no");
+}
 
 

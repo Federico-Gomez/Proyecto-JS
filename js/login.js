@@ -315,7 +315,11 @@ submitBtn_2.addEventListener("click", (e) => {
 
     if (usuarioValidado) {
 
-        Swal.fire('¡Login exitoso! ¡Bienvenido!');
+        localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioValidado));
+
+        localStorage.setItem("mostrarMensajeExito", "si");
+
+         //Swal.fire('¡Login exitoso! ¡Bienvenido!');
 
         window.location.href = "main.html";
 
