@@ -2,65 +2,65 @@
 
 // Constructor para Carreras.
 
-class Carrera {
-    constructor(nombre, duracion, materias, id, arancel, imagen) {
-        this.nombre = nombre;
-        this.duracion = duracion;
-        this.materias = materias;
-        this.id = id;
-        this.arancel = arancel;
-        this.imagen = imagen;
-    }
-}
+// class Carrera {
+//     constructor(nombre, duracion, materias, id, arancel, imagen) {
+//         this.nombre = nombre;
+//         this.duracion = duracion;
+//         this.materias = materias;
+//         this.id = id;
+//         this.arancel = arancel;
+//         this.imagen = imagen;
+//     }
+// }
 
-// Constructor para Posgrados.
+// // Constructor para Posgrados.
 
-class Posgrado {
-    constructor(nombre, duracion, materias, id, arancel, imagen) {
-        this.nombre = nombre;
-        this.duracion = duracion;
-        this.materias = materias;
-        this.id = id;
-        this.arancel = arancel;
-        this.imagen = imagen;
-    }
-}
+// class Posgrado {
+//     constructor(nombre, duracion, materias, id, arancel, imagen) {
+//         this.nombre = nombre;
+//         this.duracion = duracion;
+//         this.materias = materias;
+//         this.id = id;
+//         this.arancel = arancel;
+//         this.imagen = imagen;
+//     }
+// }
 
-// ---------------------------------------------------------------------------------------//
+// // ---------------------------------------------------------------------------------------//
 
-// Arrays
+// // Arrays
 
-// Array de Carreras.
+// // Array de Carreras.
 
-const carreras = [
-    new Carrera("Biología", "5 años", 30, "cs_naturales", 2000000, "./img/biblioteca.jpg"),
-    new Carrera("Química", "5 años", 32, "cs_naturales", 2000000, "./img/profesores_low.jpg"),
-    new Carrera("Física", "5 años", 28, "cs_naturales", 2000000, "./img/prensa_low.jpg"),
-    new Carrera("Computación", "5 años", 26, "cs_naturales", 2000000, "./img/convocatorias_low.jpg"),
+// const carreras = [
+//     new Carrera("Biología", "5 años", 30, "cs_naturales", 2000000, "./img/biblioteca.jpg"),
+//     new Carrera("Química", "5 años", 32, "cs_naturales", 2000000, "./img/profesores_low.jpg"),
+//     new Carrera("Física", "5 años", 28, "cs_naturales", 2000000, "./img/prensa_low.jpg"),
+//     new Carrera("Computación", "5 años", 26, "cs_naturales", 2000000, "./img/convocatorias_low.jpg"),
 
-    new Carrera("Derecho", "5 años", 36, "cs_sociales", 1900000, "./img/convocatorias_low.jpg"),
-    new Carrera("Economía", "5 años", 25, "cs_sociales", 1900000, "./img/prensa_low.jpg"),
-    new Carrera("Administración de Empresas", "5 años", 26, "cs_sociales", 1900000, "./img/profesores_low.jpg"),
-    new Carrera("Administración Actuarial", "5 años", 26, "cs_sociales", 1900000, "./img/biblioteca.jpg"),
+//     new Carrera("Derecho", "5 años", 36, "cs_sociales", 1900000, "./img/convocatorias_low.jpg"),
+//     new Carrera("Economía", "5 años", 25, "cs_sociales", 1900000, "./img/prensa_low.jpg"),
+//     new Carrera("Administración de Empresas", "5 años", 26, "cs_sociales", 1900000, "./img/profesores_low.jpg"),
+//     new Carrera("Administración Actuarial", "5 años", 26, "cs_sociales", 1900000, "./img/biblioteca.jpg"),
 
-    new Carrera("Arquitectura", "5 años", 28, "arquitectura", 1950000, "./img/biblioteca.jpg"),
-    new Carrera("Diseño Gráfico", "5 años", 24, "arquitectura", 1950000, "./img/convocatorias_low.jpg"),
-    new Carrera("Diseño Industrial", "5 años", 26, "arquitectura", 1950000, "./img/prensa_low.jpg"),
-    new Carrera("Diseño de Indumentaria", "5 años", 26, "arquitectura", 1950000, "./img/profesores_low.jpg")
-]
+//     new Carrera("Arquitectura", "5 años", 28, "arquitectura", 1950000, "./img/biblioteca.jpg"),
+//     new Carrera("Diseño Gráfico", "5 años", 24, "arquitectura", 1950000, "./img/convocatorias_low.jpg"),
+//     new Carrera("Diseño Industrial", "5 años", 26, "arquitectura", 1950000, "./img/prensa_low.jpg"),
+//     new Carrera("Diseño de Indumentaria", "5 años", 26, "arquitectura", 1950000, "./img/profesores_low.jpg")
+// ]
 
-// Array de Posgrados.
+// // Array de Posgrados.
 
-const posgrados = [
-    new Posgrado("Seguridad e Higiene", "1 año", 18, "cs_naturales", 320000, "./img/alumni4.png"),
-    new Posgrado("Desarrollo Sustentable", "1 año", 14, "cs_naturales", 300000, "./img/alumni3.png"),
+// const posgrados = [
+//     new Posgrado("Seguridad e Higiene", "1 año", 18, "cs_naturales", 320000, "./img/alumni4.png"),
+//     new Posgrado("Desarrollo Sustentable", "1 año", 14, "cs_naturales", 300000, "./img/alumni3.png"),
 
-    new Posgrado("Comercio Exterior", "1 año", 15, "cs_sociales", 310000, "./img/alumni4.png"),
-    new Posgrado("Derecho Constitucional", "1 año", 16, "cs_sociales", 310000, "./img/alumni3.png"),
+//     new Posgrado("Comercio Exterior", "1 año", 15, "cs_sociales", 310000, "./img/alumni4.png"),
+//     new Posgrado("Derecho Constitucional", "1 año", 16, "cs_sociales", 310000, "./img/alumni3.png"),
 
-    new Posgrado("Seguridad en la Construcción", "1 año", 18, "arquitectura", 340000, "./img/alumni3.png"),
-    new Posgrado("Paisajismo", "1 año", 14, "arquitectura", 320000, "./img/alumni4.png")
-]
+//     new Posgrado("Seguridad en la Construcción", "1 año", 18, "arquitectura", 340000, "./img/alumni3.png"),
+//     new Posgrado("Paisajismo", "1 año", 14, "arquitectura", 320000, "./img/alumni4.png")
+// ]
 
 // ---------------------------------------------------------------------------------------//
 
@@ -91,6 +91,17 @@ btnUsuario.innerText = "Hola " + usuarioLogueado.nombre + "!";
 
 // Función para agregar al DOM los objetos del Array de Carreras.
 
+let carreras = [];
+let posgrados = [];
+
+const getCarreras = async () => {
+    const response = await fetch("carreras.json");
+    const carreras = await response.json();
+    console.log(carreras);
+    return carreras;
+};
+
+
 function renderizarCarreras(carrerasElegidas) {
 
     contenedorCarreras.innerHTML = "";
@@ -117,6 +128,13 @@ function renderizarCarreras(carrerasElegidas) {
 
 // Función para agregar al DOM los objetos del Array de Posgrados.
 
+const getPosgrados = async () => {
+    const response = await fetch("posgrados.json");
+    const posgrados = await response.json();
+    console.log(posgrados);
+    return posgrados;
+};
+
 function renderizarPosgrados(posgradosElegidos) {
 
     contenedorPosgrados.innerHTML = "";
@@ -140,9 +158,21 @@ function renderizarPosgrados(posgradosElegidos) {
     actualizarBtnSeleccionarPosgrado();
 }
 
-renderizarCarreras(carreras);
+getCarreras().then(carrerasJson => {
+    carreras = carrerasJson;
+    renderizarCarreras(carrerasJson);
 
-renderizarPosgrados(posgrados);
+});
+
+getPosgrados().then(posgradosJson => {
+    posgrados = posgradosJson;
+    renderizarPosgrados(posgradosJson);
+
+});
+
+//renderizarCarreras(carreras);
+
+//renderizarPosgrados(posgrados);
 
 // ---------------------------------------------------------------------------------------//
 
@@ -225,7 +255,7 @@ if (inscripcionesPosgradoLS) {
 
 // Función para enviar las Carreras y/o Posgrados seleccionados a la sección de Inscripciones activas en local storage.
 
-function agregarAInscripcionesCarrera (e) {
+function agregarAInscripcionesCarrera(e) {
     const idBoton = e.currentTarget.id;
 
     const inscripcionCarrera = carreras.find(carrera => carrera.nombre === idBoton);
@@ -245,15 +275,15 @@ function agregarAInscripcionesCarrera (e) {
             position: "right",
             style: {
                 width: "14rem",
-              background: "linear-gradient(90deg, rgba(38,143,207,1) 0%, rgba(0,195,167,1) 72%, rgba(167,242,238,1) 100%)",
+                background: "linear-gradient(90deg, rgba(38,143,207,1) 0%, rgba(0,195,167,1) 72%, rgba(167,242,238,1) 100%)",
             }
-          }).showToast();
+        }).showToast();
     }
 
     localStorage.setItem("carrera-en-inscripciones", JSON.stringify(inscripcionesCarrera));
 }
 
-function agregarAInscripcionesPosgrado (e) {
+function agregarAInscripcionesPosgrado(e) {
     const idBoton = e.currentTarget.id;
 
     const inscripcionPosgrado = posgrados.find(posgrado => posgrado.nombre === idBoton);
@@ -273,9 +303,9 @@ function agregarAInscripcionesPosgrado (e) {
             position: "right",
             style: {
                 width: "14rem",
-              background: "linear-gradient(90deg, rgba(38,143,207,1) 0%, rgba(0,195,167,1) 72%, rgba(167,242,238,1) 100%)",
+                background: "linear-gradient(90deg, rgba(38,143,207,1) 0%, rgba(0,195,167,1) 72%, rgba(167,242,238,1) 100%)",
             }
-          }).showToast();
+        }).showToast();
     }
 
     localStorage.setItem("posgrado-en-inscripciones", JSON.stringify(inscripcionesPosgrado));
@@ -300,11 +330,11 @@ if (localStorage.getItem("mostrarMensajeExito") === "si") {
         position: "right",
         style: {
             width: "14rem",
-          background: "linear-gradient(90deg, rgba(38,143,207,1) 0%, rgba(0,195,167,1) 72%, rgba(167,242,238,1) 100%)",
+            background: "linear-gradient(90deg, rgba(38,143,207,1) 0%, rgba(0,195,167,1) 72%, rgba(167,242,238,1) 100%)",
         }
-      }).showToast();
+    }).showToast();
 
-      localStorage.setItem("mostrarMensajeExito", "no");
+    localStorage.setItem("mostrarMensajeExito", "no");
 }
 
 

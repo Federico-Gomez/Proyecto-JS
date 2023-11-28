@@ -191,6 +191,9 @@ iniciarSesionBtn.onclick = function () {
     iniciarSesionBtn.classList.remove("disabled");
     submitBtn_1.classList.add("disabled");
     submitBtn_2.classList.remove("disabled");
+    //passwordField_2.classList.add("disabled");
+    passwordField_2.style.display = "none";
+    //passwordField_2.className = "disabled";
 
 }
 
@@ -202,6 +205,7 @@ registrarseBtn.onclick = function () {
     iniciarSesionBtn.classList.add("disabled");
     submitBtn_1.classList.remove("disabled");
     submitBtn_2.classList.add("disabled");
+    passwordField_2.style.display = "flex";
 
 }
 
@@ -280,6 +284,13 @@ submitBtn_1.addEventListener("click", (e) => {
 
         });
 
+    } else if (passwordUsuario_1 !== passwordUsuario_2) {
+        return Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Las contraseñas no coinciden.",
+        });
+        
     } else {
 
         usuariosRegistrados.push({ nombre: nombreUsuario, apellido: apellidoUsuario, email: emailUsuario, password_1: passwordUsuario_1, password_2: passwordUsuario_2 });
@@ -294,6 +305,8 @@ submitBtn_1.addEventListener("click", (e) => {
         iniciarSesionBtn.classList.remove("disabled");
         submitBtn_1.classList.add("disabled");
         submitBtn_2.classList.remove("disabled");
+        passwordField_2.style.display = "none";
+        
     };
 
     console.log(usuariosRegistrados);
@@ -308,9 +321,10 @@ submitBtn_2.addEventListener("click", (e) => {
 
     const emailUsuario = document.getElementById("email").value;
     const passwordUsuario_1 = document.getElementById("password_1").value;
-    const passwordUsuario_2 = document.getElementById("password_2").value;
 
-    const usuarioValidado = JSON.parse(localStorage.getItem("usuarios")).find(usuario => usuario.email === emailUsuario && usuario.password_1 === passwordUsuario_1 && usuario.password_2 === passwordUsuario_2)
+    const usuarioValidado = JSON.parse(localStorage.getItem("usuarios")).find(usuario => usuario.email === emailUsuario && usuario.password_1 === passwordUsuario_1);
+
+    console.log(usuarioValidado);
 
 
     if (usuarioValidado) {
