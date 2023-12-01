@@ -1,69 +1,3 @@
-//Objetos
-
-// Constructor para Carreras.
-
-// class Carrera {
-//     constructor(nombre, duracion, materias, id, arancel, imagen) {
-//         this.nombre = nombre;
-//         this.duracion = duracion;
-//         this.materias = materias;
-//         this.id = id;
-//         this.arancel = arancel;
-//         this.imagen = imagen;
-//     }
-// }
-
-// // Constructor para Posgrados.
-
-// class Posgrado {
-//     constructor(nombre, duracion, materias, id, arancel, imagen) {
-//         this.nombre = nombre;
-//         this.duracion = duracion;
-//         this.materias = materias;
-//         this.id = id;
-//         this.arancel = arancel;
-//         this.imagen = imagen;
-//     }
-// }
-
-// // ---------------------------------------------------------------------------------------//
-
-// // Arrays
-
-// // Array de Carreras.
-
-// const carreras = [
-//     new Carrera("Biología", "5 años", 30, "cs_naturales", 2000000, "./img/biblioteca.jpg"),
-//     new Carrera("Química", "5 años", 32, "cs_naturales", 2000000, "./img/profesores_low.jpg"),
-//     new Carrera("Física", "5 años", 28, "cs_naturales", 2000000, "./img/prensa_low.jpg"),
-//     new Carrera("Computación", "5 años", 26, "cs_naturales", 2000000, "./img/convocatorias_low.jpg"),
-
-//     new Carrera("Derecho", "5 años", 36, "cs_sociales", 1900000, "./img/convocatorias_low.jpg"),
-//     new Carrera("Economía", "5 años", 25, "cs_sociales", 1900000, "./img/prensa_low.jpg"),
-//     new Carrera("Administración de Empresas", "5 años", 26, "cs_sociales", 1900000, "./img/profesores_low.jpg"),
-//     new Carrera("Administración Actuarial", "5 años", 26, "cs_sociales", 1900000, "./img/biblioteca.jpg"),
-
-//     new Carrera("Arquitectura", "5 años", 28, "arquitectura", 1950000, "./img/biblioteca.jpg"),
-//     new Carrera("Diseño Gráfico", "5 años", 24, "arquitectura", 1950000, "./img/convocatorias_low.jpg"),
-//     new Carrera("Diseño Industrial", "5 años", 26, "arquitectura", 1950000, "./img/prensa_low.jpg"),
-//     new Carrera("Diseño de Indumentaria", "5 años", 26, "arquitectura", 1950000, "./img/profesores_low.jpg")
-// ]
-
-// // Array de Posgrados.
-
-// const posgrados = [
-//     new Posgrado("Seguridad e Higiene", "1 año", 18, "cs_naturales", 320000, "./img/alumni4.png"),
-//     new Posgrado("Desarrollo Sustentable", "1 año", 14, "cs_naturales", 300000, "./img/alumni3.png"),
-
-//     new Posgrado("Comercio Exterior", "1 año", 15, "cs_sociales", 310000, "./img/alumni4.png"),
-//     new Posgrado("Derecho Constitucional", "1 año", 16, "cs_sociales", 310000, "./img/alumni3.png"),
-
-//     new Posgrado("Seguridad en la Construcción", "1 año", 18, "arquitectura", 340000, "./img/alumni3.png"),
-//     new Posgrado("Paisajismo", "1 año", 14, "arquitectura", 320000, "./img/alumni4.png")
-// ]
-
-// ---------------------------------------------------------------------------------------//
-
 // Variables para poder llevar a cabo acciones sobre el DOM.
 
 const contenedorCarreras = document.getElementById("contenedor-carreras");
@@ -170,9 +104,6 @@ getPosgrados().then(posgradosJson => {
 
 });
 
-//renderizarCarreras(carreras);
-
-//renderizarPosgrados(posgrados);
 
 // ---------------------------------------------------------------------------------------//
 
